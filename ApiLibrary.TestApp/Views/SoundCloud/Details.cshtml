@@ -1,0 +1,49 @@
+﻿@model Ewk.SoundCloud.ApiLibrary.TestApp.Models.SoundCloudUserDetails
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@Html.DisplayFor(m => m.User.username)</h1>
+                <h2>@Html.DisplayFor(m => m.User.full_name)</h2>
+            </hgroup>
+            <p>
+                @Html.DisplayFor(m => m.User.description)
+                @ViewBag.Message
+            </p>
+        </div>
+    </section>
+}
+<h3>web-profiles:</h3>
+<ol class="round">
+    @foreach (var webProfile in Model.WebProfiles)
+    {
+        <li class="one">
+            <h5>@webProfile.username</h5>
+            <div>@webProfile.service</div>
+            <div>@webProfile.url</div>
+        </li>
+    }
+</ol>
+<h3>followers:</h3>
+<ol class="round">
+    @foreach (var follower in Model.Followers)
+    {
+        <li class="one">
+            <h5>@follower.username</h5>
+            <div>@follower.full_name</div>
+            <div>@follower.description</div>
+        </li>
+    }
+</ol>
+<h3>followings:</h3>
+<ol class="round">
+    @foreach (var follower in Model.Followings)
+    {
+        <li class="one">
+            <h5>@follower.username</h5>
+            <div>@follower.full_name</div>
+            <div>@follower.description</div>
+        </li>
+    }
+</ol>
