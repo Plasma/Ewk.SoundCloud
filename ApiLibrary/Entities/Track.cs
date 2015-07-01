@@ -101,7 +101,7 @@ namespace Ewk.SoundCloud.ApiLibrary.Entities
         public int? release_day { get; set; } // day of the release	21
         public int? release_month { get; set; } // month of the release	5
         public int? release_year { get; set; } // year of the release	2001
-        public bool streamable { get; set; } // streamable via API (boolean)	true
+        public bool? streamable { get; set; } // streamable via API (boolean)	true
         public bool downloadable { get; set; } // downloadable (boolean)	true
         public string state { get; set; } // encoding state	"finished"
         public string track_type { get; set; } // track type	"recording"
